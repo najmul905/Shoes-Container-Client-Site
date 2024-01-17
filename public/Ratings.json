@@ -1,0 +1,163 @@
+[
+    {
+      "Name": "Product 1",
+      "_id": "001",
+      "Price": 19.99,
+      "Description": "This is the first product",
+      "Ratings": 4.5,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 2",
+      "_id": "002",
+      "Price": 29.99,
+      "Description": "Check out this amazing product",
+      "Ratings": 4.8,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 3",
+      "_id": "003",
+      "Price": 39.99,
+      "Description": "High-quality and affordable",
+      "Ratings": 4.2,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 4",
+      "_id": "004",
+      "Price": 49.99,
+      "Description": "Limited edition item",
+      "Ratings": 4.9,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 5",
+      "_id": "005",
+      "Price": 59.99,
+      "Description": "A must-have for everyone",
+      "Ratings": 4.7,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 6",
+      "_id": "006",
+      "Price": 69.99,
+      "Description": "New and improved version",
+      "Ratings": 4.4,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 7",
+      "_id": "007",
+      "Price": 79.99,
+      "Description": "Bestseller of the year",
+      "Ratings": 4.6,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 8",
+      "_id": "008",
+      "Price": 89.99,
+      "Description": "Top-rated by customers",
+      "Ratings": 4.8,
+      "ImageUrl": "https://example.com/product8.jpg"
+    },
+    {
+      "Name": "Product 9",
+      "_id": "009",
+      "Price": 99.99,
+      "Description": "Unbeatable quality",
+      "Ratings": 4.5,
+      "ImageUrl": "https://example.com/product9.jpg"
+    },
+    {
+      "Name": "Product 10",
+      "_id": "010",
+      "Price": 109.99,
+      "Description": "Perfect gift for any occasion",
+      "Ratings": 4.7,
+      "ImageUrl": "https://example.com/product10.jpg"
+    },
+    {
+      "Name": "Product 11",
+      "_id": "011",
+      "Price": 119.99,
+      "Description": "Experience the latest technology",
+      "Ratings": 4.9,
+      "ImageUrl": "https://example.com/product11.jpg"
+    },
+    {
+      "Name": "Product 12",
+      "_id": "012",
+      "Price": 129.99,
+      "Description": "Sleek and stylish design",
+      "Ratings": 4.6,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 13",
+      "_id": "013",
+      "Price": 139.99,
+      "Description": "Upgrade your lifestyle",
+      "Ratings": 4.3,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 14",
+      "_id": "014",
+      "Price": 149.99,
+      "Description": "Innovative and user-friendly",
+      "Ratings": 4.8,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 15",
+      "_id": "015",
+      "Price": 159.99,
+      "Description": "Eco-friendly and sustainable",
+      "Ratings": 4.5,
+      "ImageUrl": "https://example.com/product15.jpg"
+    },
+    {
+      "Name": "Product 16",
+      "_id": "016",
+      "Price": 169.99,
+      "Description": "Enhance your productivity",
+      "Ratings": 4.7,
+      "ImageUrl": "https://example.com/product16.jpg"
+    },
+    {
+      "Name": "Product 17",
+      "_id": "017",
+      "Price": 179.99,
+      "Description": "Stay connected with style",
+      "Ratings": 4.6,
+      "ImageUrl": "https://example.com/product17.jpg"
+    },
+    {
+      "Name": "Product 18",
+      "_id": "018",
+      "Price": 189.99,
+      "Description": "Comfort and performance combined",
+      "Ratings": 4.9,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 19",
+      "_id": "019",
+      "Price": 199.99,
+      "Description": "Discover the future of technology",
+      "Ratings": 4.4,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    },
+    {
+      "Name": "Product 20",
+      "_id": "020",
+      "Price": 209.99,
+      "Description": "Unleash your creativity with this product",
+      "Ratings": 4.8,
+      "ImageUrl": "https://i.ibb.co/RgXthTf/banner-cos1-1.jpg"
+    }
+  ]
+  
