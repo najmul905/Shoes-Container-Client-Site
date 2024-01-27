@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "All Category",
+      "data":{
+        "age":18,
+        "education":"SSC"
+      }
+      
+    },
+    {
+      "id": 2,
+      "name": "Mane"
+    },
+    {
+      "id": 3,
+      "name": "Women"
+
+    },
+    {
+      "id": 4,
+      "name": "Male kids"
+    },
+    {
+      "id": 5,
+      "name": "Female kids"
+    }
+  ]
+  
