@@ -1,29 +1,98 @@
 [
-    {
-      "id": 1,
-      "name": "All Category",
-      "data":{
-        "age":18,
-        "education":"SSC"
-      }
-      
-    },
-    {
-      "id": 2,
-      "name": "Mane"
-    },
-    {
-      "id": 3,
-      "name": "Women"
-
-    },
-    {
-      "id": 4,
-      "name": "Male kids"
-    },
-    {
-      "id": 5,
-      "name": "Female kids"
-    }
-  ]
-  
+  {
+      "_id": "1",
+      "Name": "Product 1",
+      "price": 10.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 1.",
+      "Category": "Category 1"
+  },
+  {
+      "_id": "2",
+      "Name": "Product 2",
+      "price": 19.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 2.",
+      "Category": "Category 2"
+  },
+  {
+      "_id": "3",
+      "Name": "Product 3",
+      "price": 24.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 3.",
+      "Category": "Category 1"
+  },
+  {
+      "_id": "4",
+      "Name": "Product 4",
+      "price": 14.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 4.",
+      "Category": "Category 3"
+  },
+  {
+      "_id": "5",
+      "Name": "Product 5",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 5.",
+      "Category": "Category 2"
+  },
+  {
+      "_id": "6",
+      "Name": "Product 6",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 6.",
+      "Category": "Category 1"
+  },
+  {
+      "_id": "7",
+      "Name": "Product 7",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 7.",
+      "Category": "Category 3"
+  },
+  {
+      "_id": "8",
+      "Name": "Product 8",
+      "price": 9.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 8.",
+      "Category": "Category 2"
+  },
+  {
+      "_id": "9",
+      "Name": "Product 9",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 9.",
+      "Category": "Category 1"
+  },
+  {
+      "_id": "10",
+      "Name": "Product 10",
+      "price": 34.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 10.",
+      "Category": "Category 3"
+  },
+  {
+      "_id": "11",
+      "Name": "Product 11",
+      "price": 44.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 11.",
+      "Category": "Category 2"
+  },
+  {
+      "_id": "12",
+      "Name": "Product 12",
+      "price": 64.99,
+      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "description": "Description of Product 12.",
+      "Category": "Category 1"
+  }
+]
