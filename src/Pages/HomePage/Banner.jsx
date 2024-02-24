@@ -35,7 +35,7 @@ const Banner = () => {
                     style={{fontFamily:'Croissant'}}>You can Bye from here</motion.p>
                     <div className='flex items-center justify-center text-white my-2'> <FaArrowDown></FaArrowDown></div>
                     <motion.button
-                    initial={{y:30,opacity:0}}
+                    initial={{y:30,opacity:0.3}}
                     whileInView={{y:0,opacity:1}}
                     transition={{type:"spring",duration: 2}}
                     className='bg-gradient-to-r  from-cyan-400 from-10% to-emerald-400 to-90% shadow-slate-900 px-4 py-1 rounded-xl border-b-4 font-medium active:border-b-indigo-400 duration-300 active:'>Shop Here</motion.button>
