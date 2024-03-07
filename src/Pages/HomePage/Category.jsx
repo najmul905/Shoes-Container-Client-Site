@@ -41,7 +41,7 @@ const Category = () => {
         {
           categories.map(category => <SwiperSlide key={category._id}>
             <motion.div
-              className='border  rounded hover:shadow-2xl cursor-pointer  my-3'>
+              className='border bg-white rounded hover:shadow-2xl cursor-pointer my-3'>
               <header>
                 <img className='rounded' src={category.image} alt="" />
               </header>
@@ -49,7 +49,7 @@ const Category = () => {
                 <h1 className='text-[15px] text-center font-semibold'>{category.Category}</h1>
               </div>
             </motion.div>
-          </SwiperSlide>) }
+          </SwiperSlide>)}
       </Swiper>
     </div>
   );

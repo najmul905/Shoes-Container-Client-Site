@@ -14,23 +14,24 @@ const Offer = () => {
             <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2'>
                 {
                     offers.map(offer =>
-                        <div className={`my-3 border  rounded hover:shadow-2xl cursor-pointer relative`} key={offer._Id}>
+                        <div className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} key={offer._Id}>
                             <header>
                                 <img src={offer.Image} alt="" />
                             </header>
                             <div className='p-2 truncate'>
-                                <h1 className='text-[12px] md:text-[1px]'>Name: {offer.Name}</h1>
+                                <h1 className='text-[12px] md:text-[15px]'>Name: {offer.Name}</h1>
                                 <div className='flex items-center'>
-                                    <p className='md:text-2xl font-semibold mr-2'>Price:</p>
+                                    <p className='md:text-[15px] text-[12px] font-semibold mr-2'>Price:</p>
                                     <div>
-                                        <h1 className='line-through text-[12px] md:text-[16px]'>${offer.Price}</h1>
-                                        <h1 className='text-red-600 md:font-semibold'>${(offer.Price - offer.Price * offer.DiscountPercentage / 100).toFixed(2)}</h1>
+                                        <h1 className='line-through text-[12px]'>${offer.Price}</h1>
+                                        <h1 className='text-red-600 text-[12px] font-semibold'>${(offer.Price - offer.Price * offer.DiscountPercentage / 100).toFixed(2)}</h1>
                                     </div>
                                 </div>
 
                                 <h1 className='absolute top-0 right-0 bg-black text-white m-1 px-2 rounded text-[10px] md:text-[12px] lg:text-[15px]'>Offer: {offer.DiscountPercentage}%</h1>
                                 <hr className='border-black' />
                                 <h1 className='truncate text-[12px] md:text-[16px]'>{offer.Description}</h1>
+                                
                             </div>
 
                         </div>)
