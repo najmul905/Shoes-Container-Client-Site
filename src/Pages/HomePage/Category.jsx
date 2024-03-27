@@ -8,11 +8,11 @@ import 'swiper/css/pagination';
 const Category = () => {
   const [categories, setCategories] = useState([])
   useEffect(() => {
-    fetch('Categories.json')
+    fetch('http://localhost:5000/banner_category')
       .then(res => res.json())
       .then(data => setCategories(data))
   }, [])
-  // console.log(categories)
+  console.log(categories)
   return (
     <div className='my-6 px-5'>
       <h1 className='text-2xl font-semibold text-slate-500'>Categories</h1>
@@ -43,7 +43,7 @@ const Category = () => {
             <motion.div
               className='border bg-white rounded hover:shadow-2xl cursor-pointer my-3'>
               <header>
-                <img className='rounded' src={category.image} alt="" />
+                <img className='rounded h-[140px] w-full' src={category.image} alt="" />
               </header>
               <div className='p-2'>
                 <h1 className='text-[15px] text-center font-semibold'>{category.Category}</h1>

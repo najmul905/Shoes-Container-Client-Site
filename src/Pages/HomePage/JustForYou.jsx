@@ -5,17 +5,17 @@ const JustForYou = () => {
     const [data,setData]=useState({})
     console.log(data)
     useEffect(()=>{
-        fetch('JustForYou.json')
+        fetch('http://localhost:5000/just_for_customer')
         .then(res=>res.json())
         .then(data=>setForYou(data))
     },[])
    
     return (
         <div className='my-6 px-5'>
-            <h1 className='text-2xl font-semibold text-slate-500'>Just For You</h1>\
-            <div className='grid md:grid-cols-4 lg:gird-cols-5 gap-2 grid-cols-3'>
+            <h1 className='md:text-2xl font-semibold text-slate-500'>Just For You</h1>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 gap-2 grid-cols-3'>
                 {
-forYou?.map(data=><div  onClick={()=>document.getElementById(`my_modal_3`).showModal()} className='hover:shadow-2xl cursor-pointer my-4 rounded-md' key={data._Id}>
+forYou?.map(data=><div  onClick={()=>document.getElementById(`my_modal_3`).showModal()} className='hover:shadow-2xl cursor-pointer my-4 rounded-md bg-white' key={data._Id}>
     <div onClick={()=>setData(data)}>
     <img src={data.Image} alt="" />
     <div className='my-2 px-2'>

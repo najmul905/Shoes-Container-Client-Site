@@ -1,98 +1,106 @@
 [
   {
       "_id": "1",
-      "Name": "Product 1",
+      "Name": "Mane Sneaker",
       "price": 10.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/hPJBjF2r/classic-sneakers-for-men-under.jpg",
       "description": "Description of Product 1. alndd aljd ald kwo jaij so  laksi ljodoa kjos ije lkjdos lajow allsjd  lksjdos skldj",
-      "Category": "Category 1"
+      "Category": "Sneaker"
   },
   {
       "_id": "2",
-      "Name": "Product 2",
+      "Name": "Mane Loafer",
       "price": 19.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/7Z7Xbb3V/02-13c7e756-9f2d-45e4-8a64-2851141b1c54-grande.jpg",
       "description": "Description of Product 2.",
-      "Category": "Category 2"
+      "Category": "Loafer"
   },
   {
       "_id": "3",
-      "Name": "Product 3",
+      "Name": "Mane Sandels",
       "price": 24.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/Hkj7nNb9/81w-Nj8-Rp-JIL-AC-SL1500.jpg",
       "description": "Description of Product 3.",
-      "Category": "Category 1"
+      "Category": "Sandels"
   },
   {
       "_id": "4",
-      "Name": "Product 4",
+      "Name": "Mane Flip Flop",
       "price": 14.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/8zvhp3Rf/blackreceptionflipflopssquare.jpg",
       "description": "Description of Product 4.",
-      "Category": "Category 3"
+      "Category": "Flip Flop"
   },
   {
       "_id": "5",
-      "Name": "Product 5",
+      "Name": "Rain Boots",
       "price": 29.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/T1cV6Wg7/s-l1200.webp",
       "description": "Description of Product 5.",
-      "Category": "Category 2"
+      "Category": "Rain Boots"
   },
   {
       "_id": "6",
-      "Name": "Product 6",
+      "Name": "Mane Formal Shoes",
       "price": 39.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/jSL9ds2q/88ed26d0-0288-42bf-ae98-5b967ba264c3.png",
       "description": "Description of Product 6.",
-      "Category": "Category 1"
+      "Category": "Formal Shoes"
   },
   {
       "_id": "7",
-      "Name": "Product 7",
+      "Name": "Mane House Slipper",
       "price": 49.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/tJcJ0q7Z/velvethomeshoe-2-1024x1024.jpg",
       "description": "Description of Product 7.",
-      "Category": "Category 3"
+      "Category": "House Slipper"
   },
   {
       "_id": "8",
-      "Name": "Product 8",
+      "Name": "High Heel",
       "price": 9.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/XvLP7pWP/2018-12-06-60228-1544086319-large.jpg",
       "description": "Description of Product 8.",
-      "Category": "Category 2"
+      "Category": "High Heel"
   },
   {
       "_id": "9",
-      "Name": "Product 9",
+      "Name": "Low Heel",
       "price": 59.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/RCsX37w4/61-Sz-IZWL2-RL-AC-UY1000.jpg",
       "description": "Description of Product 9.",
-      "Category": "Category 1"
+      "Category": "Low Heel"
   },
   {
       "_id": "10",
-      "Name": "Product 10",
+      "Name": "Women Boots",
       "price": 34.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/nr8gNq2y/thick-heel-off-white-boot-at-kalonbd-1.jpg",
       "description": "Description of Product 10.",
-      "Category": "Category 3"
+      "Category": "Women Boots"
   },
   {
       "_id": "11",
-      "Name": "Product 11",
+      "Name": "Women Loafer",
       "price": 44.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/L6dWNk0R/1-30660c00-9ce1-450b-9b19-2a9fab59b715-grande.jpg",
       "description": "Description of Product 11.",
-      "Category": "Category 2"
+      "Category": "Women Loafer"
   },
   {
       "_id": "12",
-      "Name": "Product 12",
+      "Name": "Women Slippers",
       "price": 64.99,
-      "image": "https://i.postimg.cc/j5nHNMfL/shoes-image1.jpg",
+      "image": "https://i.postimg.cc/Pqsv8YvJ/ph-11134207-7r98x-lln96d6ydb1ie9-tn.jpg",
       "description": "Description of Product 12.",
-      "Category": "Category 1"
-  }
+      "Category": "Women Slippers"
+  },
+  {
+    "_id": "12",
+    "Name": "Women Sneaker",
+    "price": 64.99,
+    "image": "https://i.postimg.cc/c4RB9kx0/images.jpg",
+    "description": "Description of Product 12.",
+    "Category": "Women Sneaker"
+}
 ]

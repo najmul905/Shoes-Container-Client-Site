@@ -4,15 +4,15 @@ const Offer = () => {
     const [offers, setOffers] = useState([])
     const [offerData, setOfferData] = useState({})
     useEffect(() => {
-        fetch('Discount.json')
+        fetch('http://localhost:5000/offer')
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
     console.log(offerData)
     return (
         <div className='my-6 px-5'>
-            <h1 className='text-2xl font-semibold text-slate-500'>Offer</h1>
-            <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2'>
+            <h1 className='md:text-2xl font-semibold text-slate-500'>Offer</h1>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
                     offers.map(offer =>
                         <div onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} key={offer._Id}>

@@ -5,8 +5,8 @@ import Footer from './Components/Footer/Footer';
 
 const App = () => {
   return (
-    <div>
-     <Navbar></Navbar>
+    <div className=''>  
+    <Navbar></Navbar>
      <Outlet></Outlet>
      <Footer></Footer>
     </div>
