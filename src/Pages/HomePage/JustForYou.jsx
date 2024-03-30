@@ -17,7 +17,7 @@ const JustForYou = () => {
                 {
 forYou?.map(data=><div  onClick={()=>document.getElementById(`my_modal_3`).showModal()} className='hover:shadow-2xl cursor-pointer my-4 rounded-md bg-white' key={data._Id}>
     <div onClick={()=>setData(data)}>
-    <img src={data.Image} alt="" />
+    <img className='h-72 w-full' src={data.Image} alt="" />
     <div className='my-2 px-2'>
 <p className='text-[12px] md:text-[15px]'>Name: {data.Name}</p>
 <p className='text-[12px] md:text-[15px]'>Price: ${data.Price}</p>
@@ -42,7 +42,7 @@ forYou?.map(data=><div  onClick={()=>document.getElementById(`my_modal_3`).showM
         <p>Details: {data?.Description}</p>
         </div>
         <div className='text-center'>
-            <button className='px-2 text-white bg-lime-600 rounded-xl'>Add to Card</button>
+        <button className='my-4 font-bold bg-[#bb903f] px-3 py-1 text-white hover:text-slate-700 rounded-md text-center'>Add to Card</button>
         </div>
     </div>
   </div>

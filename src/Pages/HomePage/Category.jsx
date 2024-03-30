@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
 // import './SliderStyle.css'
 const Category = () => {
   const [categories, setCategories] = useState([])
@@ -40,6 +41,7 @@ const Category = () => {
         className="mySwiper" >
         {
           categories.map(category => <SwiperSlide key={category._id}>
+            <Link to={`/shope/shopMainSide/${category.Category}`}>
             <motion.div
               className='border bg-white rounded hover:shadow-2xl cursor-pointer my-3'>
               <header>
@@ -49,6 +51,7 @@ const Category = () => {
                 <h1 className='text-[15px] text-center font-semibold'>{category.Category}</h1>
               </div>
             </motion.div>
+            </Link>
           </SwiperSlide>)}
       </Swiper>
     </div>

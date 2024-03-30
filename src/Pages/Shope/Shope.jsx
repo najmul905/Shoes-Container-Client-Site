@@ -11,7 +11,7 @@ const Shope = () => {
             <div className='hidden md:block'>
             <ShopCategory></ShopCategory>
             </div>
-            <div className='col-span-3'>
+            <div className='col-span-3 ps-5'>
                 <Outlet></Outlet>
             </div>
         </div>

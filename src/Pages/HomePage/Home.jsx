@@ -4,8 +4,6 @@ import Category from './Category';
 import Offer from './Offer';
 import JustForYou from './JustForYou';
 
-
-
 const Home = () => {
     return (
         <div className='bg-slate-50'>

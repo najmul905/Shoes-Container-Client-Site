@@ -43,7 +43,7 @@ const Offer = () => {
                             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                         </form>
                         <div>
-                            <img className='rounded-xl' src={offerData.Image} alt="" />
+                            <img className='rounded-xl h-72 w-full' src={offerData.Image} alt="" />
                             <div className='p-3'>
                                 <p>Name: {offerData.Name}</p>
                                 <div className='flex items-center'>
@@ -57,7 +57,7 @@ const Offer = () => {
                                 <p>Details: {offerData.Description}</p>
                             </div>
                             <div className='text-center'>
-                                <button className='px-2 text-white bg-lime-600 rounded-xl'>Add to Card</button>
+                            <button className='my-4 font-bold bg-[#bb903f] px-3 py-1 text-white hover:text-slate-700 rounded-md text-center'>Add to Card</button>
                             </div>
                         </div>
                     </div>
