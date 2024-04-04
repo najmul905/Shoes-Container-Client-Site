@@ -15,7 +15,8 @@ const Navbar = () => {
         </ul> </>
     const [open, setOpen] = useState(false)
     return (
-        <div className=' flex justify-between bg-gradient-to-r  from-cyan-400 from-10% to-emerald-400 to-90%  md:px-10 px-2 py-4'>
+       <div>
+         <div className=' flex justify-between bg-gradient-to-r  from-cyan-400 from-10% to-emerald-400 to-90%  md:px-10 px-2 py-4'>
             <div className='flex items-center'>
                 <Link to='/'><button className='flex items-center text-white'><p className='text-3px' style={{ fontFamily: 'Croissant One' }}>Shoes Container  </p> <img className='h-5 w-5 md:h-7 md:w-7 rounded-3xl' src="/Shoity Cosmetics.png" alt="" /></button></Link>
                 <div onClick={() => setOpen(!open)} className='text-2xl text-white right-12 px-2   absolute md:static md:hidden'>
@@ -35,6 +36,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
+       </div>
 
     );
 };

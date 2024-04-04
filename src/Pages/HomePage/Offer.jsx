@@ -15,7 +15,7 @@ const Offer = () => {
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
                     offers.map(offer =>
-                        <div onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} key={offer._Id}>
+                        <div key={offer._Id} onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} >
                             <div onClick={() => setOfferData(offer)}>
                                 <header>
                                     <img src={offer.Image} alt="" />
