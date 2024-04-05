@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
+
 
 const SingUp = () => {
-
+const {createUser}=useContext(AuthContext)
 
     const{handleSubmit,register}=useForm()
     const onSubmit = data=>{
-        console.log(data)
+        const email=data.Email
+        const password=data.Password
+        console.log(email,password)
+        createUser(email,password)
+        .then(res=>{
+            const user=res.user
+            console.log(user)
+        })
+        .catch(error=>{
+            const errorMessage=error.message
+            console.log(errorMessage)
+        })
     }
     return (
         <div className='flex items-center justify-center h-screen gap-40'>

@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const SingIn = () => {
-
-// const handelSingIn=(event)=>{
-// event.preventDefault();
-// const form=event.target;
-// const email=form.email.value;
-// const password=form.password.value;
-// console.log(email,password)
-
-
-// }
-
+const {SingIn}=useContext(AuthContext)
 const{handleSubmit,register}=useForm()
 const onSubmit= data =>{
-    console.log(data.Email)
+    const email=data.Email
+    const password=data.Password
+    SingIn(email,password)
+    .then(res=>{
+      const user=res.user;
+      console.log(user)
+    })
+    .catch(error=>{
+      const errorMessage=error.message;
+      console.log(errorMessage)
+    })
+    console.log(email,password)   
 }
 
 
@@ -42,8 +45,13 @@ const onSubmit= data =>{
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
+        <div className='text-center'>
+            <p>If you are new</p>
+            <Link className='text-green-500 font-semibold underline' to='/SingUp'>create a new account</Link>
+           </div>
       </form>
            </div>
+          
         </div>
     );
 };
