@@ -1,26 +1,49 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate,useLocation} from 'react-router-dom';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
+import { FaGoogle } from 'react-icons/fa';
 
 const SingIn = () => {
-const {SingIn}=useContext(AuthContext)
+const {logIn,googleLogIn}=useContext(AuthContext)
+// 
+const navigate=useNavigate()
+    const location=useLocation()
+    const from=location.state?.form?.pathname || '/'
+    console.log(location)
+
+
+
+
 const{handleSubmit,register}=useForm()
 const onSubmit= data =>{
     const email=data.Email
     const password=data.Password
-    SingIn(email,password)
+    // console.log(email,password)
+    logIn(email,password)
     .then(res=>{
       const user=res.user;
+      navigate(from,{replace:true})
       console.log(user)
     })
     .catch(error=>{
       const errorMessage=error.message;
       console.log(errorMessage)
     })
-    console.log(email,password)   
 }
-
+const LogInWithGoogle=()=>{
+  googleLogIn()
+  .then(res=>{
+    const user=res.user
+    console.log(user)
+    navigate(from,{replace:true})
+  })
+  .catch(error=>{
+    const errorMessage=error.message
+    console.log(errorMessage)
+  })
+  
+}
 
 
     return (
@@ -44,6 +67,9 @@ const onSubmit= data =>{
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
+        </div>
+        <div className='mx-auto'>
+          <button onClick={LogInWithGoogle} className='flex items-center justify-center rounded px-3 py-1 gap-2 bg-zinc-700 font-semibold text-white'><span><FaGoogle></FaGoogle></span> LogIn with Google</button>
         </div>
         <div className='text-center'>
             <p>If you are new</p>

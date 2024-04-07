@@ -18,6 +18,7 @@ import ManegeJustForYOu from "../Pages/Dashboard/ManegeJustForYOu";
 import ManegeOffer from "../Pages/Dashboard/ManegeOffer";
 import SingIn from "../Pages/SingIn&SingUp/SingIN";
 import SingUp from "../Pages/SingIn&SingUp/SingUp";
+import PrivetRouter from "./PrivetRouter";
 
 export const router = createBrowserRouter([
     {
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
         },
         {
           path:"shope",
-          element:<Shope></Shope>,
+          element:<PrivetRouter><Shope></Shope></PrivetRouter>,
           children:[
             {
               path:"/shope",

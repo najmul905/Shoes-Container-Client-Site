@@ -1,25 +1,49 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
+import { useNavigate,useLocation} from 'react-router-dom';
 
 
 const SingUp = () => {
-const {createUser}=useContext(AuthContext)
+const {createUser,updateUserProfile}=useContext(AuthContext)
+const navigate=useNavigate()
+    const location=useLocation()
+    const from=location.state?.form?.pathname || '/'
+
+const image_hosting_url= "https://api.imgbb.com/1/upload?expiration=600&key=0ed7f8057d2b60c5218d2cd5efac50bf"
 
     const{handleSubmit,register}=useForm()
     const onSubmit = data=>{
-        const email=data.Email
-        const password=data.Password
-        console.log(email,password)
-        createUser(email,password)
-        .then(res=>{
+      const name=data.Name;
+      const image=data.Image;
+      const email=data.Email;
+      const password=data.Password;
+      const formData=new FormData();
+      formData.append('image',image[0])
+      fetch(image_hosting_url,{
+        method:'POST',
+        body:formData
+      })
+      .then(res=>res.json())
+      .then(imageUrl=>{
+        if(imageUrl.success){
+          const Image=imageUrl.data.display_url
+          console.log(Image)
+          createUser(email,password)
+          .then(res=>{
             const user=res.user
             console.log(user)
-        })
-        .catch(error=>{
-            const errorMessage=error.message
-            console.log(errorMessage)
-        })
+            updateUserProfile(name,Image)
+            .then(res=>{
+              console.log(res.user)
+              navigate(from,{replace:true})
+            })
+            .catch(err=>console.log(err.message))
+          })
+          .catch(err=>console.log(err.message))
+        }
+      })
+      
     }
     return (
         <div className='flex items-center justify-center h-screen gap-40'>
