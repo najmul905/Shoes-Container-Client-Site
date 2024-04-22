@@ -23,7 +23,9 @@ logOut()
             <li><Link to='/' className=' my-12 font-semibold  hover:text-gray-400 duration-500'>Home</Link></li>
             <li><Link to='/shope' className='md:ml-8 font-semibold  hover:text-gray-400 duration-500'>Shope</Link></li>
             <li><Link to='/dashboard' className='md:ml-8 font-semibold  hover:text-gray-400 duration-500' >Dashboard</Link></li>
-            <li><Link to='/card' className='flex items-center font-semibold md:ml-8  hover:text-gray-400 duration-500'><div className='relative'><div className='flex items-center'>Card<FaCartShopping></FaCartShopping></div><span className='absolute -top-4 -right-4  text-white  font-bold italic rounded-full'>12</span></div></Link></li>
+            <li><Link to='/card' className='flex items-center font-semibold md:ml-8  hover:text-gray-400 duration-500'><div className='relative'><div className='flex items-center'>Card<FaCartShopping></FaCartShopping></div>
+            <h1 className='absolute -top-3 text-[10px] -right-6 bg-red-400 p-2 h-7 w-7 font-semibold text-white rounded-full'>12</h1>
+               </div></Link></li>
         </ul> </>
     return (
        <div>

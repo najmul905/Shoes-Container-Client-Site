@@ -8,14 +8,14 @@ const Offer = () => {
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
-    console.log(offerData)
+    // console.log(offerData)
     return (
         <div className='my-6 px-5'>
             <h1 className='md:text-2xl font-semibold text-slate-500'>Offer</h1>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
-                    offers.map(offer =>
-                        <div key={offer._Id} onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} >
+                    offers.map((offer,index) =>
+                        <div key={index} onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} >
                             <div onClick={() => setOfferData(offer)}>
                                 <header>
                                     <img src={offer.Image} alt="" />
