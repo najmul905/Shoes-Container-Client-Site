@@ -7,7 +7,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className='md:h-96 h-60 bg-gradient-to-r flex items-center justify-center from-cyan-400 from-10% to-emerald-400 to-90%'>
+        <div className='md:h-screen h-60 bg-gradient-to-r flex items-center justify-center from-cyan-400 from-10% to-emerald-400 to-90%'>
             <div className='flex items-center  md:mx-28'>
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}

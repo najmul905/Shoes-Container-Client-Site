@@ -13,7 +13,7 @@ const Category = () => {
       .then(res => res.json())
       .then(data => setCategories(data))
   }, [])
-  console.log(categories)
+
   return (
     <div className='my-6 px-5'>
       <h1 className='text-2xl font-semibold text-slate-500'>Categories</h1>

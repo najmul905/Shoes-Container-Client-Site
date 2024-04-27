@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import useJustForYou from '../../Components/CoustomHooks/useJustForYou';
 
 const JustForYou = () => {
-    const[forYou,setForYou]=useState([])
+    const[forYou,isPending]=useJustForYou()
     const [data,setData]=useState({})
     // console.log(data)
-    useEffect(()=>{
-        fetch('http://localhost:5000/just_for_customer')
-        .then(res=>res.json())
-        .then(data=>setForYou(data))
-    },[])
+   
    
     return (
         <div className='my-6 px-5'>

@@ -27,7 +27,7 @@ const SingUp = () => {
       .then(imageUrl => {
         if (imageUrl.success) {
           const Image = imageUrl.data.display_url
-          const users = { name: name, image: image, email: email }
+          const users = { name: name, image: Image, email: email }
           console.log(users)
           fetch('http://localhost:5000/user', {
             method: "POST",
@@ -35,7 +35,12 @@ const SingUp = () => {
             body: JSON.stringify(users)
           })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+              // if(data.acknowledged){
+                
+              // }
+              console.log(data)
+            })
           createUser(email, password)
             .then(res => {
               const user = res.user
@@ -43,6 +48,7 @@ const SingUp = () => {
               updateUserProfile(name, Image)
                 .then(res => {
                   console.log(res.user)
+                  
                   reset()
                 })
                 .catch(err => console.log(err.message))

@@ -7,7 +7,7 @@ const AllShoes = () => {
     // Fetch data use to Tanstack query
     const [isPending,all_products]=useAllProducts()
     console.log(all_products)
-    if(isPending){
+    if (isPending){
         return <div className='flex h-full items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
     }
     
@@ -28,7 +28,7 @@ const AllShoes = () => {
 console.log(pages)
     return (
         <div>
-            <div  className='grid grid-cols-4 gap-2 my-8'>
+            <div  className='grid grid-cols-4 gap-2 mt-[78px] mb-8'>
             {
                 perPageProductsData?.map(data=><div key={data._id}>
                      <div className='text-sm hover:shadow-2xl hover:border-2 rounded cursor-pointer'>

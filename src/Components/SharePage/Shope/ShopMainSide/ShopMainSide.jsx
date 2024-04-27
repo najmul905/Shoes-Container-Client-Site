@@ -34,7 +34,7 @@ const ShopMainSide = () => {
 
     return (      
             <div>
-                <div className='grid grid-cols-4 gap-2 my-8'>
+                <div className='grid grid-cols-4 gap-2 mt-[78px] '>
                {
                 perPageProductsData?.map(data=><div className='' key={data._id}>
                      <div className='text-sm hover:shadow-2xl hover:border-2 rounded cursor-pointer'>
