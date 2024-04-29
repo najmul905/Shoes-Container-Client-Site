@@ -1,26 +1,19 @@
 import React, { } from 'react';
-// import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
-import { useQuery } from "@tanstack/react-query";
+import useUser from '../../Components/CoustomHooks/useUser';
+
 
 
 const AllUser = () => {
-    // const {user}=useContext(AuthContext)
-    const{isPending,data:users}=useQuery({
-        queryKey:["users"],
-        queryFn: async()=>{
-            const response= await fetch("http://localhost:5000/user")
-            return response.json()
-        }
-    })
+   const[users,isPending]=useUser()
+
     if (isPending){
-        return <div className='flex h-full items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
+        return <div className='flex h-screen items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
     }
     console.log(users)
     return (
         <div>
           <div className="overflow-x-auto">
   <table className="table">
-    {/* head */}
     <thead>
       <tr>
         <th>Image</th>
@@ -30,10 +23,8 @@ const AllUser = () => {
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
      {users?.map((user,index)=>
-     <tr key={index}>
-        
+     <tr key={index}>  
         <td>
           <div className="">
             <div className="avatar">
@@ -51,15 +42,8 @@ const AllUser = () => {
           <button className="btn btn-ghost btn-xs">details</button>
         </th>
       </tr>
-     )}
-      {/* row 2 */}
-   
-      {/* row 4 */}
-      
+     )}   
     </tbody>
-    {/* foot */}
-    
-    
   </table>
 </div>
         </div>

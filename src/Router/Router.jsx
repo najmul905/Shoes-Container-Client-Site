@@ -9,8 +9,6 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Card from "../Pages/Card/Card";
 import ShopMainSide from "../Components/SharePage/Shope/ShopMainSide/ShopMainSide";
 import AllShoes from "../Components/SharePage/Shope/ShopCategorySide/AllShoes";
-import RightSite from "../Components/SharePage/DashboardElement/RightSite";
-import AdminHome from "../Pages/Dashboard/AdminHome";
 import AllUser from "../Pages/Dashboard/AllUser";
 import AddProducts from "../Pages/Dashboard/AddProducts";
 import ManageAllProducts from "../Pages/Dashboard/ManageAllProducts";
@@ -19,6 +17,7 @@ import ManegeOffer from "../Pages/Dashboard/ManegeOffer";
 import SingIn from "../Pages/SingIn&SingUp/SingIN";
 import SingUp from "../Pages/SingIn&SingUp/SingUp";
 import PrivetRouter from "./PrivetRouter";
+import AdminHome from "../Pages/Dashboard/AdminHome";
 
 export const router = createBrowserRouter([
     {
@@ -59,12 +58,8 @@ export const router = createBrowserRouter([
         element:<Dashboard></Dashboard>,
         children:[
           {
-            path:"/dashboard",
-            element:<RightSite></RightSite>
-          },
-          {
-            path:"dashboard/admin_home",
-            element:<AdminHome></AdminHome>
+           path:"/dashboard",
+           element:<AdminHome></AdminHome>
           },
           {
             path:"dashboard/all_user",

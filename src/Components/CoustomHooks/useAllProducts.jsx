@@ -14,7 +14,7 @@ const useAllProducts = () => {
         },
     });
 // console.log(all_products)
-    return [isPending, all_products, ];
+    return [all_products, isPending];
 };
 
 export default useAllProducts;

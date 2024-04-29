@@ -9,8 +9,8 @@ const ShopCategory = () => {
         .then(data=> setData(data))
     },[])
     return (
-            <div className=''>
-                <div className='bg-[#D1A054] menu mt-[72px] mb-8 h-screen p-6'>
+            <div className='static'>
+                <div className=' fixed w-[23vw] bg-[#D1A054] menu mt-[72px] mb-8 h-screen p-6'>
             <li className='active text-white font-bold'><Link  to="/shope">All Shoes</Link></li>
                 {
                     Data?.map(data=><div className='text-base-content' key={data._id}>

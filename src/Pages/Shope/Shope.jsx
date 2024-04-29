@@ -7,7 +7,7 @@ import ShopCategory from '../../Components/SharePage/Shope/ShopCategorySide/Shop
 const Shope = () => {
    
     return (
-        <div className='md:grid grid-cols-4  mx-12 '>
+        <div className='md:grid grid-cols-4  md:mx-4 '>
             <div className='hidden md:block'>
             <ShopCategory></ShopCategory>
             </div>

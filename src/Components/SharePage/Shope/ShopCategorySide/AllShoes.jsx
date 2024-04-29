@@ -5,7 +5,7 @@ const AllShoes = () => {
     // use to State for create a pageData
     const [currenPage,setCurrentPage]= useState(1)
     // Fetch data use to Tanstack query
-    const [isPending,all_products]=useAllProducts()
+    const [all_products,isPending]=useAllProducts()
     console.log(all_products)
     if (isPending){
         return <div className='flex h-full items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
@@ -17,7 +17,7 @@ const AllShoes = () => {
 
     const lastPostIndex=currenPage*postPerPage
     const FirstPageIndex=lastPostIndex-postPerPage
-    const perPageProductsData=all_products.slice(FirstPageIndex,lastPostIndex)
+    const perPageProductsData=all_products?.slice(FirstPageIndex,lastPostIndex)
     // console.log(perPageProductsData)
 
     // create a page Number
