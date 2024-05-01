@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useJustForYou = () => {
 
-const {data:forYou,isPending}=useQuery({
+const {data:forYou,isPending,refetch}=useQuery({
     queryKey:['justForYou'],
     queryFn:async ()=>{
         const response=await fetch("http://localhost:5000/just_for_customer")
@@ -13,7 +13,7 @@ const {data:forYou,isPending}=useQuery({
     }
 })
 
-    return [forYou,isPending]
+    return [forYou,isPending,refetch]
 };
 
 export default useJustForYou;

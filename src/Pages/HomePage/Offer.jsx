@@ -14,7 +14,7 @@ const Offer = () => {
                         <div key={index} onClick={() => document.getElementById(`my_modal_4`).showModal()} className={`my-3 border bg-white rounded hover:shadow-2xl cursor-pointer relative`} >
                             <div onClick={() => setOfferData(offer)}>
                                 <header>
-                                    <img src={offer.Image} alt="" />
+                                    <img className='h-72 w-full' src={offer.Image} alt="" />
                                 </header>
                                 <div className='p-2 truncate'>
                                     <p className='text-[12px] md:text-[15px]'>Name: {offer.Name}</p>

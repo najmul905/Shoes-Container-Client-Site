@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const useOfferProducts = () => {
-    const {data:offers,isPending}=useQuery({
+    const {data:offers,isPending,refetch}=useQuery({
         queryKey:["offers"],
         queryFn: async ()=>{
             const response=await fetch("http://localhost:5000/offer")
@@ -11,8 +11,7 @@ const useOfferProducts = () => {
             return response.json()
         }
     })
-    console.log(offers)
-    return [offers,isPending];
+    return [offers,isPending,refetch];
     
 };
 
