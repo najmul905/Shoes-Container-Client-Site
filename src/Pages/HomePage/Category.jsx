@@ -40,15 +40,15 @@ const Category = () => {
         modules={[Pagination]}
         className="mySwiper" >
         {
-          categories.map(category => <SwiperSlide key={category._id}>
+          categories.map((category,index) => <SwiperSlide key={index}>
             <Link to={`/shope/shopMainSide/${category.Category}`}>
             <motion.div
               className='border bg-white rounded hover:shadow-2xl cursor-pointer my-3'>
               <header>
-                <img className='rounded h-[140px] w-full' src={category.image} alt="" />
+                <img className='rounded h-[90px] md:h-[140px] w-full' src={category.image} alt="" />
               </header>
               <div className='p-2'>
-                <h1 className='text-[15px] text-center font-semibold'>{category.Category}</h1>
+                <h1 className='text-[10px] md:text-[15px] text-center font-semibold'>{category.Category}</h1>
               </div>
             </motion.div>
             </Link>

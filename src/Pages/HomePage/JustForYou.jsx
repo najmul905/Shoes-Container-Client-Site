@@ -10,11 +10,11 @@ const JustForYou = () => {
     return (
         <div className='my-6 px-5'>
             <h1 className='md:text-2xl font-semibold text-slate-500'>Just For You</h1>
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 gap-2 grid-cols-3'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
 forYou?.map((data,index)=><div  onClick={()=>document.getElementById(`my_modal_3`).showModal()} className='hover:shadow-2xl cursor-pointer my-4 rounded-md bg-white' key={index}>
     <div onClick={()=>setData(data)}>
-    <img className='h-72 w-full' src={data.Image} alt="" />
+    <img className='h-40 md:h-52 xl:h-72 w-full' src={data.Image} alt="" />
     <div className='my-2 px-2'>
 <p className='text-[12px] md:text-[15px]'>Name: {data.Name}</p>
 <p className='text-[12px] md:text-[15px]'>Price: ${data.Price}</p>

@@ -37,7 +37,7 @@ logOut()
                     }
                 </div>
             </div>
-            <div className={`md:mt-0 transition-all z-10 text-white  right-12 px-2  absolute md:static ${open ? 'top-16' : 'top-[-200px]'}`}>
+            <div className={`md:mt-0 transition-all z-10 text-white    right-12 px-2  absolute md:static ${open ? 'top-16' : 'top-[-200px]'}`}>
                 {link}
             </div>
             <div className='md:flex items-center gap-2 justify-end'>

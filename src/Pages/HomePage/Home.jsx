@@ -9,7 +9,7 @@ const Home = () => {
         <div className='bg-slate-50'>
            <Banner></Banner>
            <Category></Category>
-           <div className='md:px-16 mx-8'>
+           <div className=' md:mx-8'>
            <Offer></Offer>
           <JustForYou></JustForYou>
            </div>
