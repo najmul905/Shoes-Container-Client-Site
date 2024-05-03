@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const useAllProducts = () => {
-    const { isPending, data:all_products,  } = useQuery({
+    const { isPending, data:all_products, refetch } = useQuery({
         queryKey: ['all_products'],
         queryFn: async () => {
             const response = await fetch('http://localhost:5000/all_products');
@@ -14,7 +14,7 @@ const useAllProducts = () => {
         },
     });
 // console.log(all_products)
-    return [all_products, isPending];
+    return [all_products, isPending,refetch];
 };
 
 export default useAllProducts;

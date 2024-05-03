@@ -52,6 +52,7 @@ const ManegeJustForYOu = () => {
                               refetch()
                               reset() 
                         }
+
                         if(data.modifiedCount==0){
                             Swal.fire({
                                 position: "top-end",
@@ -63,7 +64,8 @@ const ManegeJustForYOu = () => {
                               });
                         }
                    });      
-                }      
+                }
+                      
             })       
         }
     

@@ -122,7 +122,7 @@ const ManegeOffer = () => {
                                     <input {...register('Image')} type="file"  className="file-input file-input-bordered file-input-accent w-full max-w-xs" />
                                 </div>
                                 <div className='text-center'>
-                                    <button  className='text-white font-semibold rounded-xl px-4 py-2 border-b-8  border-[#247a96] bg-[#6d605e]' >Edit Confirm</button>
+                                <button  className='text-white font-semibold rounded-xl px-4 py-2 border-b-8  border-[#247a96] active:border-[#97f903] duration-300 bg-[#6d605e]' >Edit Confirm</button>
                                 </div>
                             </form>
                         </div>

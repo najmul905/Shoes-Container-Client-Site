@@ -55,19 +55,19 @@ const AddProducts = () => {
 
 
     return (
-        <div className='bg-slate-400 p-8 rounded-xl'>
-            <p className='text-2xl font-bold my-4 text-center text-white'>Add Products</p>
+        <div className='bg-slate-200 p-8 rounded-xl'>
+            <p className='text-2xl font-bold my-4 text-center '>Add Products</p>
             <form onSubmit={handleSubmit(onSubmit)} action="">
                 <div className='flex items-center justify-center gap-4 my-5'>
                     <div>
                         <label className="label">
-                            <span className="text-white font-semibold">Name</span>
+                            <span className=" font-semibold">Name</span>
                         </label>
                         <input {...register("Name")} type="text" placeholder="Type here shoes Name" className=" w-full p-2 border-2 border-slate-700 rounded" />
                     </div>
                     <div>
                         <label className="label">
-                            <span className="text-white font-semibold">Price</span>
+                            <span className=" font-semibold">Price</span>
                         </label>
                         <input {...register("Price")} type="text" placeholder="Type here shoes Price" className=" w-full p-2 border-2 border-slate-700 rounded" />
                     </div>
@@ -75,7 +75,7 @@ const AddProducts = () => {
                 <div className='flex items-center justify-center gap-4 my-5'>
                     <div>
                         <label className="label">
-                            <span className="text-white font-semibold">Category</span>
+                            <span className=" font-semibold">Category</span>
                         </label>
                         <select {...register("Category")} className=" w-full p-2 border-2 border-slate-700 rounded">
                             <option disabled value="Default" selected>Select Category</option>
@@ -90,7 +90,7 @@ const AddProducts = () => {
                     </div>
                     <div>
                         <label className="label">
-                            <span className="text-white font-semibold">Details</span>
+                            <span className=" font-semibold">Details</span>
                         </label>
                         <textarea {...register("Details")} placeholder="Type here shoes Details" className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
                     </div>
@@ -99,7 +99,7 @@ const AddProducts = () => {
                     <input {...register('Image')} type="file" className="file-input file-input-bordered file-input-accent w-full max-w-xs" />
                 </div>
                 <div className='text-center'>
-                    <button className='my-4 font-bold bg-[#bb903f] px-3 py-1 text-white hover:text-slate-700 rounded-md text-center'>Add Products</button>
+                    <button className='my-4 font-bold bg-[#bb903f] px-3 py-1  hover:text-slate-700 rounded-md text-center'>Add Products</button>
                 </div>
             </form>
         </div>

@@ -11,20 +11,20 @@ const AllUser = () => {
     }
     console.log(users)
     return (
-        <div>
+        <div >
           <div className="overflow-x-auto">
   <table className="table">
     <thead>
-      <tr>
+      <tr className='bg-slate-700 text-white md:text-[15px] text-[10px]'>
         <th>Image</th>
         <th>Name</th>
         <th>Email</th>
-        <th></th>
+        <th>Details</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className='bg-slate-200 '>
      {users?.map((user,index)=>
-     <tr key={index}>  
+     <tr className='md:text-[15px] text-[10px]'  key={index}>  
         <td>
           <div className="">
             <div className="avatar">
@@ -39,7 +39,7 @@ const AllUser = () => {
         </td>
         <td><p>{user?.email}</p></td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button className="btn btn-ghost btn-xs md:text-[15px] text-[10px]">details</button>
         </th>
       </tr>
      )}   

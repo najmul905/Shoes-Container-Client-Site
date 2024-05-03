@@ -7,8 +7,9 @@ import { FaArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className='md:h-screen h-60 bg-gradient-to-r flex items-center justify-center from-cyan-400 from-10% to-emerald-400 to-90%'>
-            <div className='flex items-center  md:mx-28'>
+        <div className='md:h-screen  bg-black relative'>
+            <img className='h-screen w-full opacity-50 ' src="https://i.postimg.cc/5NFfMrVB/trendy-six-pieces-womens-sneakers-260nw-1890747514.jpg" alt="" />
+            <div className='absolute top-36 xl:left-24 flex items-center  md:mx-28'>
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -20,13 +21,15 @@ const Banner = () => {
                             initial={{ y: -30, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: "spring", duration: 2 }}
-                            style={{ fontFamily: 'Croissant One' }} className=' md:text-3xl tracking-wider font-extrabold md:font-bold'>You Favorite Shoes is here</motion.h1>
+                            style={{ fontFamily: 'Croissant One' }} className=' text-[15px] md:text-3xl tracking-wider font-extrabold md:font-bold'>You Favorite Shoes is here</motion.h1>
                         <motion.p
+                         className='text-[12px] md:text-[16px]'
                             initial={{ x: 30, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ type: "spring", duration: 2 }}
                             style={{ fontFamily: 'Croissant' }}>If you Want to Bye...</motion.p>
                         <motion.p
+                        className='text-[12px] md:text-[16px]'
                             initial={{ x: -30, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ type: "spring", duration: 2 }}
@@ -36,7 +39,7 @@ const Banner = () => {
                             initial={{ y: 30, opacity: 0.3 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: "spring", duration: 2 }}
-                            className=' bg-gradient-to-r  from-cyan-400 from-10% to-emerald-400 to-90% shadow-slate-900 px-4 py-1 rounded-xl border-b-4 font-medium active:border-b-indigo-400 duration-300  active:'>Shop Here</motion.button></Link>
+                            className=' bg-gradient-to-r  from-cyan-400 from-10% to-emerald-400 to-90% shadow-slate-900 px-2 md:px-4 py-1 text-[10px] md:text-[15px] rounded-md md:rounded-md border-b-4 font-medium active:border-b-indigo-400 duration-300  active:'>Shop Here</motion.button></Link>
                     </div>
                 </div>
                 <motion.div
