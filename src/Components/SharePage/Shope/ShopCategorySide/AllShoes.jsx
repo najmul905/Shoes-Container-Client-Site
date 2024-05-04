@@ -8,7 +8,7 @@ const AllShoes = () => {
     const [all_products,isPending]=useAllProducts()
     console.log(all_products)
     if (isPending){
-        return <div className='flex h-full items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
+        return <div className='flex h-screen items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
     }
     
     
