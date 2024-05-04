@@ -111,7 +111,6 @@ const handelDelete=(id)=>{
     .then(res=>res.json())
     .then(data=>{
         if(data.deletedCount){
-            console.log(data)
             swalWithBootstrapButtons.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",

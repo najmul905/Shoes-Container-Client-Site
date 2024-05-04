@@ -68,7 +68,52 @@ const ManegeJustForYOu = () => {
                       
             })       
         }
-    
+        const handelDelete=(id)=>{
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                  confirmButton: "btn btn-success",
+                  cancelButton: "btn btn-danger"
+                },
+                buttonsStyling: false
+              });
+              swalWithBootstrapButtons.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                reverseButtons: true
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`http://localhost:5000/just_for_customer/${id}`,{
+                        method:"DELETE"
+                    })
+                    .then(res=>res.json())
+                    .then(data=>{
+                        if(data.deletedCount){
+                            swalWithBootstrapButtons.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                              });
+                              refetch()
+                        }
+                    })
+                 
+                } else if (
+                  /* Read more about handling dismissals below */
+                  result.dismiss === Swal.DismissReason.cancel
+                ) {
+                  swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your imaginary file is safe :)",
+                    icon: "error"
+                  });
+                }
+              });
+        }
+
     if (isPending){
         return <div className='flex h-screen items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
     }
@@ -86,7 +131,7 @@ const ManegeJustForYOu = () => {
                     <hr className='bg-white border-2' />
                     <div className='flex items-center gap-2 md:gap-6 md:mt-4'>
                        <Link onClick={() => document.getElementById('my_modal_3').showModal()}> <button onClick={()=>setForYou(data)} className='text-white font-semibold rounded px-2 bg-[#6d605e]'>Edit</button></Link>
-                        <button className='text-white font-semibold rounded px-2 bg-[#FF6347]'>Delete</button>
+                        <button onClick={()=>handelDelete(data._id)} className='text-white font-semibold rounded px-2 bg-[#FF6347]'>Delete</button>
                     </div>
                 </div>
             </div>
