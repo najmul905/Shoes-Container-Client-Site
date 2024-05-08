@@ -2,13 +2,14 @@ import React from 'react';
 import Image1 from "/BannerImage/shoes banner1.png"
 import Image2 from "./../../../public/BannerImage/shoes banner2.png"
 import { motion } from "framer-motion";
+import image3 from "./../../../public/trendy-six-pieces-womens-sneakers-260nw-1890747514.jpg"
 
 import { FaArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className='md:h-screen  bg-black relative'>
-            <img className='h-screen w-full opacity-50 ' src="https://i.postimg.cc/5NFfMrVB/trendy-six-pieces-womens-sneakers-260nw-1890747514.jpg" alt="" />
+        <div className='md:h-screen bg-black relative'>
+            <img className='h-screen w-full opacity-50 ' src={image3} alt="" />
             <div className='absolute top-36 xl:left-24 flex items-center  md:mx-28'>
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}

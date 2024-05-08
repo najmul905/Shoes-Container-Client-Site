@@ -9,7 +9,7 @@ const AllUser = () => {
     if (isPending){
         return <div className='flex h-screen items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
     }
-    console.log(users)
+   
     return (
         <div >
           <div className="overflow-x-auto">

@@ -36,6 +36,9 @@ const SingIn = () => {
       .then(res => {
         const user = res.user
         // console.log(user)
+        if(res.user){
+          navigate(from, { replace: true })
+        }
         const users = {
           name: user.displayName, email: user.email, image: user.photoURL
         }
