@@ -83,9 +83,7 @@ const JustForYou = () => {
                                 <hr className='border-2 border-black' />
                                 <p>Details: {data?.Description}</p>
                             </div>
-                            <div className='text-center'>
-                                <button className='my-4 font-bold bg-[#bb903f] px-3 py-1 text-white hover:text-slate-700 rounded-md text-center'>Add to Card</button>
-                            </div>
+                           
                         </div>
                     </div>
                 </dialog>

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import ShopCategory from '../../Components/SharePage/Shope/ShopCategorySide/ShopCategory';
-
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 
 const Shope = () => {
+    const [toggle,setToggle]=useState(true)
+    console.log(toggle)
    
     return (
-        <div className='md:grid grid-cols-4  md:mx-4 '>
-            <div className='hidden md:block'>
+        <div className='  flex  md:grid grid-cols-4 md:mx-4 relative'>
+            <div className='flex'>
+            <div className={`absolute md:static duration-500 ${toggle?"-left-[340px]":"left-0"} `}>
             <ShopCategory></ShopCategory>
             </div>
-            <div className='col-span-3 ps-5'>
+            <div className='md:hidden fixed items-center flex justify-center h-screen w-4 '> 
+            <button  onClick={()=>setToggle(!toggle)}>{toggle?<FaChevronCircleRight />:<FaChevronCircleLeft />}</button>
+            </div>
+            </div>
+            <div className='md:col-span-3 px-2 md:ps-5 ms-4'>
                 <Outlet></Outlet>
             </div>
         </div>

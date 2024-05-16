@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <div className='md:h-screen bg-black relative'>
             <img className='h-screen w-full opacity-50 ' src={image3} alt="" />
-            <div className='absolute top-36 xl:left-24 flex items-center  md:mx-28'>
+            <div className='absolute top-36  flex items-center  md:mx-28'>
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}

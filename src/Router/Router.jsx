@@ -18,6 +18,7 @@ import SingIn from "../Pages/SingIn&SingUp/SingIN";
 import SingUp from "../Pages/SingIn&SingUp/SingUp";
 import PrivetRouter from "./PrivetRouter";
 import AdminHome from "../Pages/Dashboard/AdminHome";
+import Payment from "../Pages/Card/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -47,12 +48,17 @@ export const router = createBrowserRouter([
           path:"card",
           element:<Card></Card>
         },
+        {
+          path:"payment",
+          element:<Payment></Payment>
+        },
         
       ]
     },
     {
       path:'*',
       element:<Error></Error>    },
+     
       {
         path:"dashboard",
         element:<Dashboard></Dashboard>,

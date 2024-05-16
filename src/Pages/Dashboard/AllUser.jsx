@@ -12,7 +12,7 @@ const AllUser = () => {
    
     return (
         <div >
-          <div className="overflow-x-auto">
+          <div className="md:overflow-x-auto">
   <table className="table">
     <thead>
       <tr className='bg-slate-700 text-white md:text-[15px] text-[10px]'>
@@ -35,9 +35,9 @@ const AllUser = () => {
           </div>
         </td>
         <td>
-         <p>{user?.name}</p>
+         <p className='text-ellipsis'>{user?.name}</p>
         </td>
-        <td><p>{user?.email}</p></td>
+        <td><p className='text-ellipsis'>{user?.email}</p></td>
         <th>
           <button className="btn btn-ghost btn-xs md:text-[15px] text-[10px]">details</button>
         </th>

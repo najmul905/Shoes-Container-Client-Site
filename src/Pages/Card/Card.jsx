@@ -1,6 +1,7 @@
 import React from 'react';
 import useCard from '../../Components/CoustomHooks/useCard';
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 
 const Card = () => {
@@ -105,7 +106,7 @@ const Card = () => {
         <h1 className=''><span className='text-[20px] font-bold'>Total Products:</span> <span className='text-[22px] text-red-700 font-semibold'>{card?.length}</span></h1>
         <p><span className='text-[20px] font-bold'>Amount:</span> <span className='text-[22px] text-red-700 font-semibold'>${totalAmount}</span></p>
         <div className='mx-auto my-10'>
-            <button className=' border-0 text-[8px] md:text-[15px] border-b-[#bb903f] px-2 rounded font-semibold hover:bg-[#bb903f] hover:text-white border-b-4 active:bg-white active:text-slate-600'>Pye Now</button>
+          <Link to="/payment">  <button className=' border-0 text-[8px] md:text-[15px] border-b-[#bb903f] px-2 rounded font-semibold hover:bg-[#bb903f] hover:text-white border-b-4 active:bg-white active:text-slate-600'>Pye Now</button></Link>
         </div>
         </div>
        </div>

@@ -33,7 +33,8 @@ const googleLogIn=()=>{
     return signInWithPopup(auth,googleProvider)
 }
 // Image hosting URL
-const image_hosting_url = "https://api.imgbb.com/1/upload?key=0ed7f8057d2b60c5218d2cd5efac50bf"
+const image_hosting_url = import.meta.env.VITE_image_hosting_url
+console.log(image_hosting_url)
 
 
 
