@@ -69,7 +69,8 @@ const CheckOut = ({price,card}) => {
 
     }
     return (
-        <form className='w-2/6  mx-auto' onSubmit={handleSubmit}>
+       <div>
+         <form className=' mx-auto rounded bg-white text-center' onSubmit={handleSubmit}>
       <CardElement
         options={{
           style: {
@@ -86,10 +87,11 @@ const CheckOut = ({price,card}) => {
           },
         }}
       />
-      <button className=' border-0 text-[8px] md:text-[15px] border-b-[#bb903f] px-2 rounded font-semibold hover:bg-[#bb903f] hover:text-white border-b-4 active:bg-white active:text-slate-600' type="submit" disabled={!stripe}>
+      <button className=' border-0 text-[8px] mt-12 mb-4  md:text-[15px] border-b-[#bb903f] px-6 rounded font-semibold hover:bg-[#bb903f] hover:text-white border-b-4 active:bg-white active:text-slate-600' type="submit" disabled={!stripe}>
         Pay
       </button>
     </form>
+       </div>
     );
 };
 

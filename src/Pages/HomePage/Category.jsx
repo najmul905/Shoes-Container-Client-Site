@@ -5,18 +5,47 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
+import { Parallax, Background } from 'react-parallax';
+
+
 // import './SliderStyle.css'
 const Category = () => {
   const [categories, setCategories] = useState([])
+  const [loading,setLoading]=useState(true)
   useEffect(() => {
     fetch('http://localhost:5000/banner_category')
       .then(res => res.json())
-      .then(data => setCategories(data))
+      .then(data => {
+        setCategories(data)
+        if(data){
+          setLoading(false)
+        }
+      })
   }, [])
+  
+  if (loading) {
+    return (
+      <div className='flex h-screen items-center justify-center'>
+        <span className='loading loading-spinner loading-md'></span>
+      </div>
+    );
+  }
 
   return (
-    <div className='my-6 px-5'>
-      <h1 className='text-2xl font-semibold text-slate-500'>Categories</h1>
+    <div  className='my-6 px-5'>
+     <div  className=''>
+     <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={('https://i.ibb.co/SKQZbPc/Green-and-Yellow-Simple-Clean-Shoes-Sale-Banner-3-1.jpg')}
+        bgImageAlt="the dog"
+        strength={-200}
+        className='h-[30vh] md:w-[70%] md:mx-auto'
+    >
+        
+        <h1  className="hero-content text-center text-3xl Font-bold  text-white">Categories</h1>
+
+    </Parallax>
+     </div>
       <Swiper
         slidesPerView={3}
         spaceBetween={5}

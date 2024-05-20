@@ -3,7 +3,7 @@ import useOfferProducts from '../../Components/CoustomHooks/useOfferProduc';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 import useCard from '../../Components/CoustomHooks/useCard';
 import Swal from 'sweetalert2'
-
+import { Parallax, Background } from 'react-parallax';
 
 const Offer = () => {
     const {user}=useContext(AuthContext)
@@ -47,10 +47,29 @@ const Offer = () => {
     }
     
    
+  if (isPending) {
+    return (
+      <div className='flex h-screen items-center justify-center'>
+        <span className='loading loading-spinner loading-md'></span>
+      </div>
+    );
+  }
 }
     return (
         <div className='my-6 px-5'>
-            <h1 className='md:text-2xl font-semibold text-slate-500'>Offer</h1>
+            <div>
+            <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={('https://i.ibb.co/kqJzPB3/Green-and-Yellow-Simple-Clean-Shoes-Sale-Banner-1.jpg')}
+        bgImageAlt="the dog"
+        strength={-200}
+        className='h-[30vh] md:w-[70%] md:mx-auto'
+    >
+        
+        <h1  className="hero-content text-center text-3xl Font-bold  text-white">Offer</h1>
+
+    </Parallax>
+            </div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
                     offers?.map((offer,index) =>

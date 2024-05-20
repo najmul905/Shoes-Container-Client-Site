@@ -65,7 +65,7 @@ const AllShoes = () => {
       <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 mt-[78px] mb-8'>
         {perPageProductsData?.map((data) => (
           <div key={data._id}>
-            <div className='text-sm hover:shadow-2xl hover:border-2 rounded cursor-pointer'>
+            <div className='text-sm hover:shadow-2xl hover:border-2  rounded cursor-pointer'>
               <img className='h-60 w-full bg-slate-900' src={data.Image} alt='' />
               <div className='ps-2'>
                 <p>Name: {data.Name}</p>

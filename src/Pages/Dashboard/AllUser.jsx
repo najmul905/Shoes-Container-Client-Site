@@ -12,8 +12,8 @@ const AllUser = () => {
    
     return (
         <div >
-          <div className="md:overflow-x-auto">
-  <table className="table">
+          <div className="">
+  <table className="md:table">
     <thead>
       <tr className='bg-slate-700 text-white md:text-[15px] text-[10px]'>
         <th>Image</th>
@@ -29,7 +29,7 @@ const AllUser = () => {
           <div className="">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={user?.image} alt="Avatar Tailwind CSS Component" />
+                <img className='' src={user?.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
           </div>

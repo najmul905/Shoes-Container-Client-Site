@@ -13,7 +13,8 @@ const Payment = () => {
     const [card]=useCard()
     const totalPrice= (card || []).reduce((sum, item) => sum + parseFloat(item.Price || 0), 0).toFixed(2);
     return (
-        <div className='mt-28'>
+        <div className='mt-28 bg-slate-500 p-12 w-[70%] mx-auto rounded'>
+            <h1 className='text-white text-center my-4 text-2xl font-semibold'>Payment Now</h1>
            <Elements stripe={stripePromise}>
       <CheckOut price={totalPrice}
       card={card}></CheckOut>

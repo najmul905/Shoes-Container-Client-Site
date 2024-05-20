@@ -3,6 +3,7 @@ import useJustForYou from '../../Components/CoustomHooks/useJustForYou';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 import useCard from '../../Components/CoustomHooks/useCard';
 import Swal from 'sweetalert2'
+import { Parallax } from 'react-parallax';
 
 const JustForYou = () => {
     const{user}=useContext(AuthContext)
@@ -46,9 +47,28 @@ const JustForYou = () => {
        
     }
 
+    if (isPending) {
+        return (
+          <div className='flex h-screen items-center justify-center'>
+            <span className='loading loading-spinner loading-md'></span>
+          </div>
+        );
+      }
     return (
         <div className='my-6 px-5'>
-            <h1 className='md:text-2xl font-semibold text-slate-500'>Just For You</h1>
+            <div>
+            <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={('https://i.ibb.co/0hMGr9s/Green-and-Yellow-Simple-Clean-Shoes-Sale-Banner-2-1.jpg')}
+        bgImageAlt="the dog"
+        strength={-200}
+        className='h-[30vh] md:w-[70%] md:mx-auto'
+    >
+        
+        <h1  className="hero-content text-center text-3xl Font-bold  text-white">Just For You</h1>
+
+    </Parallax>
+            </div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
                 {
                     forYou?.map((data, index) => <div  className='hover:shadow-2xl cursor-pointer my-4 rounded-md bg-white' key={index}>

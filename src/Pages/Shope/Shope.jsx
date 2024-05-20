@@ -15,7 +15,7 @@ const Shope = () => {
             <ShopCategory></ShopCategory>
             </div>
             <div className='md:hidden fixed items-center flex justify-center h-screen w-4 '> 
-            <button  onClick={()=>setToggle(!toggle)}>{toggle?<FaChevronCircleRight />:<FaChevronCircleLeft />}</button>
+            <button  onClick={()=>setToggle(!toggle)}>{toggle?<FaChevronCircleRight size={18} />:<FaChevronCircleLeft size={18} />}</button>
             </div>
             </div>
             <div className='md:col-span-3 px-2 md:ps-5 ms-4'>
