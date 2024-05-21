@@ -39,9 +39,8 @@ const SingIn = () => {
         if(res.user){
           navigate(from, { replace: true })
         }
-        const users = {
-          name: user.displayName, email: user.email, image: user.photoURL
-        }
+        const status="User"
+        const users = { name: user.displayName, email: user.email, image: user.photoURL,status}
         // console.log(users)
         fetch("http://localhost:5000/user",{
           method:"POST",

@@ -10,7 +10,7 @@ const useCard = () => {
             return response.json();
         },
     });
-console.log(card)
+
     return [card,refetch,isPending]
 };
 

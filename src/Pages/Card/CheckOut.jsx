@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import {useStripe,CardElement,useElements} from '@stripe/react-stripe-js';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
+import useCard from '../../Components/CoustomHooks/useCard';
 
-const CheckOut = ({price,card}) => {
+const CheckOut = ({price}) => {
   const {user}=useContext(AuthContext)
+  const [cards,refetch]=useCard()
     const stripe=useStripe()
     const element=useElements()
    const [clientSecret,setClientSecret]=useState('')
+  
 
    useEffect(() => {
     const createPaymentIntent = async () => {
@@ -66,6 +69,27 @@ const CheckOut = ({price,card}) => {
       console.log(cardError)
     }
     console.log(paymentIntent)
+    if(paymentIntent.status==="succeeded"){
+      const payment ={
+        email:user?.email,
+        totalPrice:price,
+        transactionId:paymentIntent.id,
+        CardItemId:cards.map(item=>item.itemId),
+        cardId:cards.map(item=>item._id)
+      }
+      fetch('http://localhost:5000/payment',{
+        method:"POST",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify(payment)
+      })
+      .then(res=>res.json())
+      .then((data)=>{
+        if(data.DeleteResult.acknowledged){
+          refetch()
+        }
+      })
+      
+    }
 
     }
     return (

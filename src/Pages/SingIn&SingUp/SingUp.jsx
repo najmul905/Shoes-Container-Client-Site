@@ -26,8 +26,9 @@ const SingUp = () => {
       .then(res => res.json())
       .then(imageUrl => {
         if (imageUrl.success) {
+          const status="User"
           const Image = imageUrl.data.display_url
-          const users = { name: name, image: Image, email: email }
+          const users = { name: name, image: Image, email: email,status }
           console.log(users)
           fetch('http://localhost:5000/user', {
             method: "POST",

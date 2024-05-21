@@ -62,7 +62,7 @@ const JustForYou = () => {
         bgImage={('https://i.ibb.co/0hMGr9s/Green-and-Yellow-Simple-Clean-Shoes-Sale-Banner-2-1.jpg')}
         bgImageAlt="the dog"
         strength={-200}
-        className='h-[30vh] md:w-[70%] md:mx-auto'
+        className='h-[30vh] md:w-[70%] md:mx-auto '
     >
         
         <h1  className="hero-content text-center text-3xl Font-bold  text-white">Just For You</h1>
