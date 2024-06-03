@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div className='md:h-screen bg-black relative'>
-            <img className='h-screen w-full opacity-50 ' src={image3} alt="" />
+            <img className='md:h-screen h-96 w-full opacity-50 ' src={image3} alt="" />
             <div className='absolute top-36  flex items-center  md:mx-28'>
                 <motion.div
                     initial={{ x: -200, opacity: 0 }}

@@ -8,9 +8,25 @@ import Swal from 'sweetalert2'
 
 const ManageAllProducts = () => {
     const {image_hosting_url}=useContext(AuthContext)
+    const [currentPage, setCurrentPage] = useState(1);
     const [all_products, isPending,refetch]=useAllProducts()
    const [data,setData]=useState({})
    const{register,handleSubmit,reset}=useForm()
+
+
+   const postPerPage = 18;
+   const lastPostIndex = currentPage * postPerPage;
+   const firstPageIndex = lastPostIndex - postPerPage;
+   const perPageProductsData = all_products?.slice(firstPageIndex, lastPostIndex);
+
+   // create a page Number
+   let pages=[];
+   for(let i = 1; i<= Math.ceil(all_products?.length/postPerPage); i++){
+       pages.push(i)
+   }
+
+
+
    const id=data._id
    const onSubmit=(ProductData)=>{
     console.log(id)
@@ -136,7 +152,7 @@ const handelDelete=(id)=>{
 
     return (
         <div className='text-[10px] md:text-[16px]'>
-          {all_products?.map((data,index)=><div key={index}>
+          {perPageProductsData?.map((data,index)=><div key={index}>
             <div className='flex items-center mt-4 gap-4  bg-slate-200 rounded border-2 hover:shadow-2xl'>
                 <img className='md:h-[200px] md:w-[220px] md:p-8 rounded h-[100px] w-[110px] p-2' src={data.Image} alt="" />
                 <div className='py-2'>
@@ -151,6 +167,24 @@ const handelDelete=(id)=>{
                 </div>
             </div>
           </div>)}
+          <div>
+          <div className='flex items-center justify-center my-5'>
+          {pages.map((page, index) => (
+            <div className='' key={index}>
+              <button
+                onClick={() => setCurrentPage(page)}
+                className={` border px-2 ${
+                  currentPage === page
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                } border border-slate-500`}
+              >
+                {page}
+              </button>
+            </div>
+          ))}
+        </div>
+          </div>
           <dialog id="my_modal_3" className="modal">
                     <div className="modal-box">
                         <form method="dialog">

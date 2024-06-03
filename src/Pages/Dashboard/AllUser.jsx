@@ -139,7 +139,7 @@ const AllUser = () => {
         <td><p className='text-ellipsis'>{user?.email}</p></td>
         <td><p>status: <span className='font-bold'>{user?.status}</span></p><br /> {user?.status=="Admin"?<button onClick={()=>handelChangeAdminRoll(user?._id)} className='btn btn-ghost btn-xs md:text-[15px] text-[10px]'>Change Admin-Roll</button>:<button onClick={()=>handelAdmin(user?._id)} className='btn btn-ghost btn-xs md:text-[15px] text-[10px]'>Make Admin</button>}</td>
         <th>
-          <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn btn-ghost btn-xs md:text-[15px] text-[10px] bg-green-500 text-white">details</button><br /><button onClick={()=>handelDelete(user._id)} className="btn btn-ghost btn-xs md:text-[15px] text-[10px] bg-red-700 text-white">Delete User</button>
+          <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn btn-ghost btn-xs  text-[10px] bg-green-500 text-white">details</button><br /><button onClick={()=>handelDelete(user._id)} className="btn btn-ghost btn-xs text-[10px] bg-red-700 mt-2 text-white">Delete User</button>
         </th>
       </tr>
      )}   

@@ -41,8 +41,8 @@ const Offer = () => {
         Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Something went wrong!",
-            footer: '<a href="#">Why do I have this issue?</a>'
+            text: "There have no User",
+            footer: 'Please LogIn and Add this Products in your Card'
           });
     }
     
