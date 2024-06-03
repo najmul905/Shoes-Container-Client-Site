@@ -14,7 +14,7 @@ const CheckOut = ({price}) => {
    useEffect(() => {
     const createPaymentIntent = async () => {
       try {
-        const response = await fetch('http://localhost:5000/create_payment_intent', {
+        const response = await fetch('https://shoes-container-server.vercel.app/create_payment_intent', {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ price }) // Send price as an object
@@ -77,7 +77,7 @@ const CheckOut = ({price}) => {
         CardItemId:cards.map(item=>item.itemId),
         cardId:cards.map(item=>item._id)
       }
-      fetch('http://localhost:5000/payment',{
+      fetch('https://shoes-container-server.vercel.app/payment',{
         method:"POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(payment)

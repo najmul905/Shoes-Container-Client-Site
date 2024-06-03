@@ -35,12 +35,12 @@ const Card = () => {
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/card/data/${id}`,{
+                fetch(`https://shoes-container-server.vercel.app/card/data/${id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())
         .then(data=>{
-            if(data.deletedCount){
+            if(data.deletedCount>0){
                 swalWithBootstrapButtons.fire({
                     title: "Deleted!",
                     text: "Your file has been deleted.",

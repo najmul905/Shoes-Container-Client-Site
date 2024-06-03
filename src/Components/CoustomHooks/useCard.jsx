@@ -6,7 +6,7 @@ const useCard = () => {
     const { isPending, data:card, refetch } = useQuery({
         queryKey: ['card',user?.email],
         queryFn: async () => {
-            const response = await fetch(`http://localhost:5000/card/${user?.email}`);
+            const response = await fetch(`https://shoes-container-server.vercel.app/card/${user?.email}`);
             return response.json();
         },
     });

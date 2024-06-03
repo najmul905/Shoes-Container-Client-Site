@@ -4,7 +4,7 @@ const useOfferProducts = () => {
     const {data:offers,isPending,refetch}=useQuery({
         queryKey:["offers"],
         queryFn: async ()=>{
-            const response=await fetch("http://localhost:5000/offer")
+            const response=await fetch("https://shoes-container-server.vercel.app/offer")
             if(!response.ok){
                 throw new Error("Fail to fetch")
             }

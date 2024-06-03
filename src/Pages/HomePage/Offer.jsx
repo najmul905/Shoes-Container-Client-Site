@@ -17,7 +17,7 @@ const Offer = () => {
        const offerPrice=(Price-Price*DiscountPercentage/100).toFixed(2)
        console.log(offerData)
        const cardData={Name,Image,itemId:_id,Price:offerPrice,Details,Email:user.email}
-        fetch(`http://localhost:5000/card`,{
+        fetch(`https://shoes-container-server.vercel.app/card`,{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(cardData)

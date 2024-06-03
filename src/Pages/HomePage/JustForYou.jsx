@@ -15,7 +15,7 @@ const JustForYou = () => {
         if(user&&user.email){
            const {Name,Image,_id,Price,Details}=data
            const cardData={Name,Image,itemId:_id,Price,Details,Email:user.email}
-            fetch(`http://localhost:5000/card`,{
+            fetch(`https://shoes-container-server.vercel.app/card`,{
                 method:"POST",
                 headers:{"content-type":"application/json"},
                 body:JSON.stringify(cardData)

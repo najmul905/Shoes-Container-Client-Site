@@ -11,7 +11,7 @@ const Shope = () => {
     return (
         <div className='  flex  md:grid grid-cols-4 md:mx-4 relative'>
             <div className='flex'>
-            <div className={`absolute md:static duration-500 ${toggle?"-left-[340px]":"left-0"} `}>
+            <div className={`absolute md:static duration-500 ${toggle?"-left-[440px]":"left-0"} `}>
             <ShopCategory></ShopCategory>
             </div>
             <div className='md:hidden fixed items-center flex justify-center h-screen w-4 '> 

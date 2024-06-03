@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ShopCategory = () => {
     const [Data, setData] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/banner_category")
+        fetch("https://shoes-container-server.vercel.app/banner_category")
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

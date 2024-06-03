@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const SingUp = () => {
-  const { createUser, updateUserProfile,image_hosting_url } = useContext(AuthContext)
+  const { createUser, updateUserProfile,image_hosting_url,loading } = useContext(AuthContext)
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.form?.pathname || '/'
@@ -30,7 +30,7 @@ const SingUp = () => {
           const Image = imageUrl.data.display_url
           const users = { name: name, image: Image, email: email,status }
           console.log(users)
-          fetch('http://localhost:5000/user', {
+          fetch('https://shoes-container-server.vercel.app/user', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(users)
@@ -62,7 +62,7 @@ const SingUp = () => {
   }
   return (
     <div className='flex items-center justify-center h-screen gap-40'>
-      <div><img className='h-80 rounded' src="https://i.postimg.cc/hvX7fxby/762-7628121-cartoon-writing-png-writing-cartoon-clipart-pen-transparent.png" alt="" /></div>
+      <div className='hidden md:block'><img className='h-80 rounded' src="https://i.postimg.cc/hvX7fxby/762-7628121-cartoon-writing-png-writing-cartoon-clipart-pen-transparent.png" alt="" /></div>
       <div>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body shadow-2xl rounded">
           <div className="form-control">
@@ -90,7 +90,7 @@ const SingUp = () => {
             <input type="file" {...register("Image")} required placeholder='Image' className="file-input file-input-bordered w-full max-w-xs" />
           </div>
           <div className="form-control mt-6">
-            <button  className="btn btn-primary">SingUp</button>
+            <button disabled={loading}  className="btn btn-primary"> {loading ? 'Loading...' : 'SingUp'}</button>
           </div>
         </form>
       </div>

@@ -1,20 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
 
 const SingIn = () => {
-  const { logIn, googleLogIn } = useContext(AuthContext)
+  const { logIn, googleLogIn,loading } = useContext(AuthContext)
   // 
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.form?.pathname || '/'
-  // console.log(location)
-
-
-
-
+ 
+const[error,setError]=useState('')
+console.log(error)
   const { handleSubmit, register } = useForm()
   const onSubmit = data => {
     const email = data.Email
@@ -28,7 +26,7 @@ const SingIn = () => {
       })
       .catch(error => {
         const errorMessage = error.message;
-        console.log(errorMessage)
+        setError(errorMessage)
       })
   }
   const LogInWithGoogle = () => {
@@ -42,7 +40,7 @@ const SingIn = () => {
         const status="User"
         const users = { name: user.displayName, email: user.email, image: user.photoURL,status}
         // console.log(users)
-        fetch("http://localhost:5000/user",{
+        fetch("https://shoes-container-server.vercel.app/user",{
           method:"POST",
           headers:{
             'content-type':'application/json'
@@ -58,13 +56,14 @@ const SingIn = () => {
       .catch(error => {
         const errorMessage = error.message
         console.log(errorMessage)
+        
       })
   }
 
 
   return (
     <div className='h-screen flex items-center justify-center gap-40'>
-      <div><img className='h-80 rounded' src="https://i.postimg.cc/hvX7fxby/762-7628121-cartoon-writing-png-writing-cartoon-clipart-pen-transparent.png" alt="" /></div>
+      <div className='hidden md:block'><img className='h-80 rounded' src="https://i.postimg.cc/hvX7fxby/762-7628121-cartoon-writing-png-writing-cartoon-clipart-pen-transparent.png" alt="" /></div>
       <div>
         {/* form */}
 
@@ -82,7 +81,7 @@ const SingIn = () => {
             <input type="password" {...register("Password")} placeholder="password" className="input input-bordered" required />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button disabled={loading} className="btn btn-primary"> {loading ? 'Loading...' : 'Login'}</button>
           </div>
           <div className='mx-auto'>
             <button onClick={LogInWithGoogle} className='flex items-center justify-center rounded px-3 py-1 gap-2 bg-zinc-700 font-semibold text-white'><span><FaGoogle></FaGoogle></span> LogIn with Google</button>
@@ -92,6 +91,9 @@ const SingIn = () => {
             <Link className='text-green-500 font-semibold underline' to='/SingUp'>create a new account</Link>
           </div>
         </form>
+        <div>
+          {error&&<p className='text-red-600 font-semibold p-4 text-center'>Invalid Account</p>}
+        </div>
       </div>
 
     </div>

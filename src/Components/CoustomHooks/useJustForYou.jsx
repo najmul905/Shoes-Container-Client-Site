@@ -5,7 +5,7 @@ const useJustForYou = () => {
 const {data:forYou,isPending,refetch}=useQuery({
     queryKey:['justForYou'],
     queryFn:async ()=>{
-        const response=await fetch("http://localhost:5000/just_for_customer")
+        const response=await fetch("https://shoes-container-server.vercel.app/just_for_customer")
         if(!response.ok){
             throw new Error("Fail to fetch")
         }

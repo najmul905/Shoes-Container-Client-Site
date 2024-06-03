@@ -14,7 +14,7 @@ const ShopMainSide = () => {
     const { data: categories, isPending } = useQuery({
         queryKey: ["category", category], 
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/all_products/${category}`);
+            const res = await fetch(`https://shoes-container-server.vercel.app/all_products/${category}`);
             return res.json();
         }
     });
@@ -25,7 +25,7 @@ const ShopMainSide = () => {
 
 
     if (isPending) {
-        return <div className='flex h-screen items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
+        return <div className=' h-screen flex items-center justify-center'><span className="loading loading-spinner loading-md"></span></div>
         
     }
 
@@ -45,7 +45,7 @@ const ShopMainSide = () => {
         if(user && user.email){
             const {Name, Image, _id, Price, Details} = data;
             const cardData = {Name, Image, itemId:_id, Price, Details, Email:user.email};
-            fetch(`http://localhost:5000/card`,{
+            fetch(`https://shoes-container-server.vercel.app/card`,{
                 method:"POST",
                 headers:{"content-type":"application/json"},
                 body:JSON.stringify(cardData)

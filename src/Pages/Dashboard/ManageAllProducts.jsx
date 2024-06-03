@@ -42,7 +42,7 @@ const ManageAllProducts = () => {
             const Url=ImageUrl.data.display_url
             const UpdateData={Name,Price,Details,Category,Image:Url}
             
-            fetch(`http://localhost:5000/all_products/data/${id}`, {
+            fetch(`https://shoes-container-server.vercel.app/all_products/data/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -105,7 +105,7 @@ const handelDelete=(id)=>{
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/all_products/data/${id}`,{
+            fetch(`https://shoes-container-server.vercel.app/all_products/data/${id}`,{
         method:"DELETE"
     })
     .then(res=>res.json())

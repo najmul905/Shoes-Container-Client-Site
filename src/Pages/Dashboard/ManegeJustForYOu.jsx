@@ -31,7 +31,7 @@ const ManegeJustForYOu = () => {
                     const Url=ImageUrl.data.display_url
                     const UpdateData={Name,Price,Description,Image:Url}
                     
-                    fetch(`http://localhost:5000/just_for_customer/${id}`, {
+                    fetch(`https://shoes-container-server.vercel.app/just_for_customer/${id}`, {
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json"
@@ -86,7 +86,7 @@ const ManegeJustForYOu = () => {
                 reverseButtons: true
               }).then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/just_for_customer/${id}`,{
+                    fetch(`https://shoes-container-server.vercel.app/just_for_customer/${id}`,{
                         method:"DELETE"
                     })
                     .then(res=>res.json())

@@ -15,7 +15,7 @@ const Banner = () => {
                     initial={{ x: -200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ type: "spring", duration: 2, }}
-                    className='flex-auto w-[25%]'><img className='h-[200hv]' src={Image1} alt="" /></motion.div>
+                    className='flex-auto w-[25%]'><img  className='h-[200hv]' src={Image1} alt="" /></motion.div>
                 <div className='flex-auto text-white w-[50%] text-center   rounded-lg  '>
                     <div>
                         <motion.h1

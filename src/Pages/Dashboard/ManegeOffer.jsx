@@ -35,7 +35,7 @@ const ManegeOffer = () => {
                 const Url=ImageUrl.data.display_url
                 const UpdateData={Name,Price,Description,DiscountPercentage,Image:Url}
                 
-                fetch(`http://localhost:5000/offer/${id}`, {
+                fetch(`https://shoes-container-server.vercel.app/offer/${id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -83,7 +83,7 @@ const ManegeOffer = () => {
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/offer/${id}`,{
+                fetch(`https://shoes-container-server.vercel.app/offer/${id}`,{
                     method:"DELETE"
                 })
                 .then(res=>res.json())
